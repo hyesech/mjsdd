@@ -203,3 +203,17 @@ a.a[0] = 5;
 console.log(b.a[0])          // 1
 ```
 값에 의한 전달과 참조에 의한 전달은 식별자가 기억하는 메모리 공간에 저장되어 있는 값을 복사해서 전달한다는 면에서 동일하다. 다만 식별자가 기억하는 메모리 공간, 즉 변수에 저장되어 있는 값이 원시 값이나 참조 값이냐의 차이만 있을 뿐이다. 따라서 자바스크립트에는 참조에 의한 전달은 존재하지 않고, 값에 의한 전달만이 존재한다고 말할 수 있다.
+
+```javascript
+var person1 = {
+    name: 'hyesech'
+}
+
+var person2 = {
+    name: 'hyesech'
+}
+
+console.log(person1 === person2);       // (1)
+console.log(person1.name === person2.name)      // (2)
+```
+위의 경우 (1)은 false, (2)는 true다. 
